@@ -110,5 +110,8 @@ app.delete('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-// Mongo DB Atlas Account
-// mongodb+srv://yoriko:akashi0987@cluster0.ekkf7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+/* Mongo DB Atlas Account
+ *
+ * mongodb+srv://yoriko:akashi0987@cluster0.ekkf7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+ *
+ */
