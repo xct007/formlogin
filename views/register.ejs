@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="bg-gray-200">
+    <div class="h-screen w-screen flex justify-center items-center">
+        <div class="relative w-11/12 h-132 bg-white shadow-xl rounded-md flex justify-center items-center sm:w-9/12 sm:h-128">
+            <div class="absolute right-0 w-96">
+                <img src="blue.png" alt="Unsplash Image" class="invisible lg:visible">
+            </div>
+            <div class="relative w-96 h-100 mr-26 lg:h-100 lg:mr-96">
+                <a href="/" class="absolute right-5 mt-8 bg-cyan-400 hover:bg-cyan-600 text-white rounded shadow-lg transition-colors px-3 py-2 lg:right-0 lg:mt-10 lg:px-5 lg:py-3">Kembali</a>
+                <h1 class="font-bold text-2xl ml-5 mt-5 text-slate-700 lg:ml-0 lg:text-3xl">Daftar</h1>
+                <p class="text-sm ml-5 text-slate-700 lg:mt-2 lg:ml-0 lg:text-lg">Silahkan daftar terlebih dahulu . . .</p>
+               <% if (messages) { %>
+                <p class="text-xs ml-5 mt-1 text-pink-500 lg:text-sm lg:mt-2 lg:ml-0"><%= messages.error %></p>
+                <% } %>
+                <div class="max-w-lg mx-auto">
+                    <form action="/register" method="POST">
+                        <label for="name">
+                            <span class="block font-semibold mb-1 mt-5 text-slate-700 ml-5 lg:ml-0">Nama Lengkap</span>
+                            <input type="name" id="name" name="name" placeholder="Masukkan nama lengkap anda..." class="mt-1 ml-5 px-3 py-2 border shadow rounded w-80 block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400 lg:ml-0 lg:w-full"/>
+                        </label>
+                        <label for="email">
+                            <span class="block font-semibold mb-1 mt-5 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5 ml-5 lg:ml-0">Email</span>
+                            <input type="email" id="email" name="email" placeholder="Masukkan email anda..." class="mt-1 ml-5 px-3 py-2 border shadow rounded w-80 block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer lg:ml-0 lg:w-full"/>
+                            <p class="text-sm text-pink-700 invisible peer-invalid:visible ml-5 lg:ml-0">Email Tidak Valid.</p>
+                        </label>
+                        <label for="password">
+                            <span class="block font-semibold mb-1 text-slate-700 ml-5 lg:ml-0">Kata Sandi</span>
+                            <input type="password" id="password" name="password" placeholder="Masukkan kata sandi..." class="mt-1 ml-5 px-3 py-2 border shadow rounded w-11/12 block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400 lg:ml-0 lg:w-full" />
+                        </label>
+                        <button class="bg-cyan-400 hover:bg-cyan-600 text-white rounded shadow-lg transition-colors px-4 py-2 m-3 ml-5 mx-auto inline lg:ml-0 lg:px-8 lg:py-3">Daftar</button>
+                        <p class="flex ml-5 text-base lg:relative lg:inline lg:top-3 lg:left-3 lg:ml-0">Sudah punya akun? <a href="/login" class="text-cyan-600 font-semibold ml-3 lg:ml-1">Masuk disini!</a></p>
+                    </form>
+                </div>
+            </div>
+            <h1 class="text-xs absolute bottom-0 right-0 text-slate-700 lg:left-0">github.com/noire-xv</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-200 font-Montserrat">
+    <div class="h-screen w-screen flex justify-center items-center">
+        <div class="relative w-11/12 h-132 bg-white shadow-xl rounded-md flex justify-center items-center sm:w-9/12 sm:h-128">
+            <img src="minami.png" alt="Minami" class="absolute w-4/12 bottom-80 sm:w-36 sm:bottom-72">
+            <h1 class="absolute mt-4 text-2xl font-bold text-slate-700 lg:text-3xl lg:mt-1">Halo, <span class="bg-gradient-to-r from-sky-500 to-pink-600 bg-clip-text text-transparent"><%= name%></span></h1>
+            <div class="mx-auto w-4/5 h-1 mt-16 bg-slate-700 lg:w-3/5"></div>
+            <div class="mx-auto flex absolute justify-center mt-32">
+                <form action="/logout?_method=DELETE" method="POST">
+                    <button type="submit" class="bg-cyan-400 hover:bg-cyan-600 text-white rounded shadow-lg transition-colors px-12 py-3 mt-5">Keluar</button>
+                </form>
+            </div>
+            <h1 class="text-xs absolute bottom-0 text-slate-700">Powered by Node.js, MongoDB, Express.js, TailwindCSS</h1>
+        </div>
+    </div>
+</body>
+</html>
