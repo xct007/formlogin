@@ -89,11 +89,11 @@ app.post('/register', checkNotAuthenticated, async (req, res) => {
         res.redirect('/register');
     } else {
         try {
-//             const hashedPassword = await bcrypt.hash(req.body.password, 10);
+            const hashedPassword = await bcrypt.hash(req.body.password, 10);
             const user = new User({
                 name: req.body.name,
                 email: req.body.email,
-                password: req.body.password,
+                password: hashedPassword,
             });
 
             await user.save();
